@@ -1,0 +1,28 @@
+.progress-bar-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.progress-bar-left, .progress-bar-right {
+  width: 100rpx;
+  font-size: 24rpx;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1;
+  color: #fff;
+  box-sizing: border-box;
+}
+.progress-bar-left {
+  padding-right: 10rpx;
+  text-align: right;
+}
+.progress-bar-right {
+  padding-left: 10rpx;
+  text-align: left;
+}
+.progress-bar-middle {
+  flex: 1 0 0;
+}
+.progress-bar-middle-slider {
+  margin: 16rpx 20rpx;
+}

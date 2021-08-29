@@ -1,0 +1,92 @@
+.radio-tab-container {
+  width: 100%;
+  height: calc(100vh - 100rpx);
+  overflow: auto;
+}
+.panel {
+  padding: 20rpx 0 0;
+}
+.panel-title {
+  margin: 0 20rpx;
+  padding-bottom: 10rpx;
+  font-size: 30rpx;
+  color: black;
+  font-weight: bold;
+}
+.panel-title::before {
+  display: inline-block;
+  content: '';
+  width: 3px;
+  height: 30rpx;
+  margin-right: 10rpx;
+  background: #ff5050;
+  vertical-align: -2px;
+}
+.panel-content {
+  width: 100%;
+}
+.recommend-program-item {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 20rpx 30rpx;
+}
+.recommend-program-item-image {
+  flex: 0 0 auto;
+  width: 120rpx;
+  height: 120rpx;
+}
+.recommend-program-item-info {
+  flex: 1 0 0;
+  margin-left: 20rpx;
+}
+.recommend-program-item-title {
+  width: 570rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-top: 20rpx;
+  font-size: 32rpx;
+  line-height: 1;
+  color: black;
+}
+.recommend-program-item-desc {
+  width: 570rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-top: 30rpx;
+  font-size: 26rpx;
+  line-height: 1.2;
+  color: #999;
+}
+.panel-content.flex-3 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: flex-start;
+  padding: 0 10rpx;
+  box-sizing: border-box;
+}
+.recommend-dj-item {
+  width: 33.3333%;
+  height: auto;
+  padding: 0 10rpx;
+  margin-bottom: 30rpx;
+  box-sizing: border-box;
+}
+.recommend-dj-item-image {
+  width: 100%;
+  height: 223.3333rpx;
+  vertical-align: middle;
+}
+.recommend-dj-item-title {
+  font-size: 30rpx;
+  line-height: 50rpx;
+  color: black;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.recommend-dj-item.empty {
+  margin: 0;
+}

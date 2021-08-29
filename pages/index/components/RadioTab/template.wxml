@@ -1,0 +1,19 @@
+<template name="radio-template">
+  <navigator 
+    class="recommend-dj-item"
+    wx:for="{{sourceList}}" 
+    wx:key="id"
+    target="self"
+    url="/pages/play-list/index?playlistId={{item.id}}"
+  >
+    <image 
+      class="recommend-dj-item-image" 
+      src="{{item.picUrl}}?param=200y200" 
+      mode="aspectFill"
+      lazy-load
+    />
+    <view class="recommend-dj-item-title">
+      {{item.name}}
+    </view>
+  </navigator>
+</template>

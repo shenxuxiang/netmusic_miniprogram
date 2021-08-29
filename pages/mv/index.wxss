@@ -1,0 +1,92 @@
+.mv-x {
+  width: 100%;
+  height: 421rpx;
+  background: #f8f8f8;
+}
+.mv-x-video {
+  width: 100%;
+  height: 100%;
+}
+.tabs {
+  width: 100%;
+  height: 80rpx;
+  background: #e8e8e8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tabs-item {
+  margin: 0 40rpx;
+  font-size: 28rpx;
+  color: #333;
+  border-bottom: 4rpx solid rgba(0, 0, 0, 0);
+  transition: all 200ms ease;
+}
+.tabs-item.active {
+  color: red;
+  border-color: red;
+}
+.tabs-panel {
+  width: 100%;
+  height: calc(100vh - 501rpx);
+  overflow: hidden;
+}
+/* 详情 */
+.detail-panel {
+  width: 100%;
+  height: 100%;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+}
+.mv-name {
+  font-size: 36rpx;
+  color: black;
+  line-height: 60rpx;
+}
+.mv-author, .mv-playCount, .mv-publishTime, .mv-desc {
+  margin-top: 24rpx;
+  font-size: 28rpx;
+  color: #3d3d3d;
+  line-height: 42rpx;
+}
+.divider {
+  width: 100%;
+  height: 1rpx;
+  background: #e1e2e3;
+  margin: 16rpx 0;
+}
+/* mv */
+.mv-panel {
+  width: 100%;
+  height: 100%;
+  padding: 0 8rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+.mv-item {
+  width: 50%;
+  margin-top: 16rpx;
+  padding: 0 8rpx;
+  box-sizing: border-box;
+}
+.mv-item-image {
+  width: 100%;
+  height: 220rpx;
+  border-radius: 6rpx 6rpx 0 0;
+}
+.mv-item-name {
+  font-size: 30rpx;
+  color: black;
+  line-height: 1.5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.mv-item-singer {
+  font-size: 30rpx;
+  color: #999;
+  line-height: 1.5;
+}

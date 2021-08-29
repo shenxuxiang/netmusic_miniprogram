@@ -1,0 +1,15 @@
+<view class="navigation-tab">
+  <view class="navigation-tab-wrapper">
+    <view 
+      wx:for="{{navList}}" 
+      wx:key="id" 
+      data-index="{{index}}"
+      class="navigate-tab-item{{activeKey === item.id ? ' active' : ''}}"
+      bindtap="handleClick"
+    >
+      {{item.title}}
+    </view>
+    <view class="indicator indicator-{{indicatorNum}}"/>
+  </view>
+</view>
+  

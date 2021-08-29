@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "LoadMore": "../LoadMore"
+  },
+  "component": true
+}

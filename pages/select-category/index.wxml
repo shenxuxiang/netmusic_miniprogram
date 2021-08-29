@@ -1,0 +1,26 @@
+<view class="select-category-modal">
+  <view 
+    class="all-category{{current === '全部歌单' ? ' active' : ''}}"
+    data-category="全部歌单"
+    bindtap="handleClick"
+  >
+    全部歌曲
+  </view>
+  <view class="category-x" wx:for="{{catList}}" wx:key="key">
+    <view class="category-title">{{item.title}}</view>
+    <view class="sub-category">
+      <view 
+        wx:for="{{subCatMap[item.key]}}" 
+        wx:key="name"
+        wx:for-item="subItem"
+        data-category="{{subItem.name}}"
+        bindtap="handleClick"
+        class="sub-category-item{{current === subItem.name ? ' active' : ''}}"
+      >
+        {{subItem.name}}
+      </view>
+    </view>
+  </view>
+  <view class="button save-button" bindtap="handleSave">保存</view>
+</view>
+  

@@ -1,0 +1,67 @@
+<scroll-view 
+  class="recommend-tab"
+  enable-flex
+  scroll-y
+>
+  <view class="panel">
+    <view class="panel-header">
+      <image 
+        src="../../../../static/images/cm2_discover_icn_recmd@2x.png" 
+        mode="aspectFill"
+        class="panel-avatar"
+      />
+      <view class="panel-title">
+        推荐歌单
+      </view>
+    </view>
+    <RecommendPanel sourceList="{{recommendList}}" />
+  </view>
+
+  <view class="panel">
+    <view class="panel-header">
+      <image 
+        src="../../../../static/images/cm2_discover_icn_newest@2x.png" 
+        mode="aspectFill"
+        class="panel-avatar"
+      />
+      <view class="panel-title">
+        最新音乐
+      </view>
+    </view>
+    <NewSongPanel sourceList="{{newSongList}}"/>
+  </view>
+
+  <view class="panel">
+    <view class="panel-header">
+      <image 
+        src="../../../../static/images/cm2_discover_icn_mv@2x.png" 
+        mode="aspectFill"
+        class="panel-avatar"
+      />
+      <view class="panel-title">
+        推荐mv
+      </view>
+    </view>
+    <MvPanel sourceList="{{mvList}}"/>
+  </view>
+
+  <view class="panel">
+    <view class="panel-header">
+      <image 
+        src="../../../../static/images/cm2_discover_icn_radio@2x.png" 
+        mode="aspectFill"
+        class="panel-avatar"
+      />
+      <view class="panel-title">
+        主播电台
+      </view>
+    </view>
+    <DjPanel sourceList="{{djList}}" />
+  </view>
+
+  <LoadMore 
+    visible="{{ recommendList.length > 0 || newSongList.length > 0 || mvList.length > 0 || djList.length > 0 }}" 
+    status="notMore" 
+  />
+</scroll-view>
+  

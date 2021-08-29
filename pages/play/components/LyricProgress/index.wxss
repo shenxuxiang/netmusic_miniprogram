@@ -1,0 +1,29 @@
+.lyric {
+  display: inline-block;
+  text-align: center;
+  line-height: 64rpx;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.3);
+  background-image: linear-gradient(to right, #fff, #fff);
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  -webkit-text-fill-color: transparent;
+  background-size: 0% 100%;
+  -webkit-background-clip: text;
+}
+.lyric.active {
+  animation-name: fill_animation;
+  animation-duration: 10s;
+  animation-delay: 0;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+@keyframes fill_animation {
+  0% { background-size: 0% 100% }
+  100% { background-size: 100% 100% }
+}
+
+

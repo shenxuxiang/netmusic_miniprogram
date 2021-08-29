@@ -1,0 +1,18 @@
+<view class="progress-bar-wrapper">
+  <view class="progress-bar-left">{{playTimeLabel}}</view>
+  <view class="progress-bar-middle">
+    <slider 
+      min="0"
+      max="100" 
+      step="1" 
+      value="{{sliderValue}}"
+      class="progress-bar-middle-slider"
+      backgroundColor="rgba(255, 255, 255, 0.3)"
+      activeColor="rgba(255, 255, 255, 1)"
+      block-size="12"
+      bindchange="handleChange"
+    />
+  </view>
+  <view class="progress-bar-right">{{durationTimeLabel}}</view>
+</view>
+  

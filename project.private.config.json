@@ -1,0 +1,35 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/play-list/index",
+          "pathName": "pages/play-list/index",
+          "query": "playlistId=5103284414",
+          "scene": null
+        },
+        {
+          "name": "pages/comment/index",
+          "pathName": "pages/comment/index",
+          "query": "id=A_PL_0_5103284414",
+          "scene": null
+        }, {
+          "name": "pages/mv/index",
+          "pathName": "pages/mv/index",
+          "query": "id=14311490",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,11 @@
+<!-- mv 详情 -->
+<template name="detail">
+  <scroll-view scroll-y class="detail-panel">
+    <view class="mv-name">{{ mvDetail.name }}</view>
+    <view class="mv-author">歌手：{{ mvDetail.artists[0].name || '' }}</view>
+    <view class="mv-playCount">播放量：{{ mvDetail.playCount || '' }}</view>
+    <view class="mv-publishTime">发行时间：{{ mvDetail.publishTime || '' }}</view>
+    <view class="divider" />
+    <view class="mv-desc">{{ mvDetail.desc || '' }}</view>
+  </scroll-view>
+</template>

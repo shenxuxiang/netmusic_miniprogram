@@ -1,0 +1,62 @@
+<import src="./template.wxml" />
+<scroll-view class="radio-tab-container" scroll-y>
+  <view class="panel">
+    <view class="panel-title">精彩节目</view>
+    <view class="panel-content">
+      <navigator
+        class="recommend-program-item"
+        wx:for="{{recommendProgramList}}" 
+        wx:key="id"
+        target="self"
+        url="/pages/play-list/index?playlistId={{item.id}}" 
+      >
+        <image 
+          class="recommend-program-item-image" 
+          src="{{item.coverUrl}}?param=200y200" 
+          mode="aspectFill" 
+          lazy-load
+        />
+        <view class="recommend-program-item-info">
+          <view class="recommend-program-item-title">
+            {{item.name}}
+          </view>
+          <view class="recommend-program-item-desc">
+            {{item.description}}
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+
+  <view class="panel">
+    <view class="panel-title">精选电台</view>
+    <view class="panel-content flex-3">
+      <template 
+        is="radio-template" 
+        data="{{ sourceList: recommendDjList }}"
+      />
+      <view class="recommend-dj-item empty"/>
+      <view class="recommend-dj-item empty"/>
+      <view class="recommend-dj-item empty"/>
+    </view>
+  </view>
+
+  <view class="panel">
+    <view class="panel-title">热门电台</view>
+    <view class="panel-content flex-3">
+      <template 
+        is="radio-template" 
+        data="{{ sourceList: recommendHotList }}"
+      />
+      <view class="recommend-dj-item empty"/>
+      <view class="recommend-dj-item empty"/>
+      <view class="recommend-dj-item empty"/>
+    </view>
+  </view>
+
+  <LoadMore 
+    visible="{{ recommendHotList.length > 0 || recommendDjList.length > 0 }}" 
+    status="notMore" 
+  />
+</scroll-view>
+  

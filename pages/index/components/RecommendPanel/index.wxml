@@ -1,0 +1,26 @@
+<view class="recommend-panel">
+  <view 
+    class="list-item" 
+    wx:for="{{sourceList}}" 
+    wx:key="id"
+    data-playlist-id="{{item.id}}"
+    bindtap="handleClick"
+  >
+    <image 
+      class="list-item-image"
+      src="{{item.picUrl}}?param=200y200" 
+      mode="aspectFill"
+      lazy-load
+    />
+    <view class="play-count">
+      <image 
+        class="play-count-image" 
+        src="../../../../static/images/p0.png" 
+        mode="aspectFill" 
+        lazy-load
+      />
+      <text>{{ item.playCount }}</text>
+    </view>
+    <view class="list-item-title">{{ item.name }}</view>
+  </view>
+</view>

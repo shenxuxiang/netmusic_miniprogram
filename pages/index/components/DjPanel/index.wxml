@@ -1,0 +1,12 @@
+<view class="dj-panel">
+  <view class="list-item" wx:for="{{sourceList}}" wx:key="id">
+    <image 
+      class="list-item-image"
+      src="{{item.picUrl}}?param=200y200" 
+      mode="aspectFill"
+      lazy-load
+    />
+    <view class="list-item-title">{{ item.name }}</view>
+    <view class="list-item-author">{{ item.program.radio.name }}</view>
+  </view>
+</view>

@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "MV页",
+  "usingComponents": {
+    "LoadMore": "../../components/LoadMore",
+    "CommentList": "../../components/CommentList"
+  },
+  "enablePullDownRefresh": false,
+  "disableScroll": true
+}

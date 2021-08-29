@@ -1,0 +1,27 @@
+<!-- mv播放页面 -->
+<import src="./template.detail.wxml" />
+<import src="./template.mv.wxml" />
+
+<view class="container">
+  <view class="mv-x">
+    <video 
+      wx:if="{{mvDetail}}"
+      src="{{mvDetail.brs[240]}}" 
+      id="mv-video"
+      class="mv-x-video"
+      controls
+      autoplay
+    />
+  </view>
+  <view class="tabs">
+    <view class="tabs-item{{ activeTab === 'detail' ? ' active' : '' }}" data-tab-name="detail" bindtap="handleClickTab">详情</view>
+    <view class="tabs-item{{ activeTab === 'comment' ? ' active' : '' }}" data-tab-name="comment" bindtap="handleClickTab">评论</view>
+    <view class="tabs-item{{ activeTab === 'mv' ? ' active' : '' }}" data-tab-name="mv" bindtap="handleClickTab">相关mv</view>
+  </view>
+
+  <view class="tabs-panel">
+    <template wx:if="{{ activeTab === 'detail' }}" is="detail" data="{{ mvDetail }}" />
+    <CommentList wx:elif="{{ activeTab === 'comment' }}" commentID="{{ mvDetail.commentThreadId }}" />
+    <template wx:elif="{{ activeTab === 'mv' }}" is="mv" data="{{ mvs }}" />
+  </view>
+</view>

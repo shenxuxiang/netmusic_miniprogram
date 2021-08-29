@@ -1,0 +1,4 @@
+<view class="comment-page">
+  <CommentList commentID="{{id}}"/>
+</view>
+  

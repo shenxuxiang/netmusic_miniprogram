@@ -1,0 +1,167 @@
+.playlist-header {
+  position: relative;
+  width: 100%;
+  height: 400rpx;
+  background: #d9d9d9;
+  z-index: 0;
+}
+.playlist-header-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 260rpx;
+  padding: 40rpx 40rpx 0;
+  box-sizing: border-box;
+}
+.playlist-header-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  filter: blur(30px) brightness(0.8);
+  z-index: -1;
+}
+.playlist-header-cover {
+  position: relative;
+  flex: 0 0 auto;
+  width: 220rpx;
+  height: 220rpx;
+  background: #ccc;
+}
+.playlist-header-cover-image {
+  width: 100%;
+  height: 100%;
+}
+.play-count {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  padding: 0 10rpx;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+.play-count-image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 8rpx;
+}
+.playlist-header-left {
+  flex: 1 0 0;
+  margin-left: 40rpx;
+  padding-top: 40rpx;
+}
+.playlist-header-left-title {
+  width: calc(100vw - 340rpx);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 16rpx 0;
+  font-size: 28rpx;
+  line-height: 1;
+  color: #fff;
+}
+.creator-info {
+  padding-top: 10rpx;
+}
+.creator-info-avatar {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+.creator-info-nickname {
+  padding-left: 20rpx;
+  font-size: 24rpx;
+  line-height: 1;
+  color: #fff;
+}
+.playlist-header-toolbar-x {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100rpx;
+  margin-top: 10rpx;
+}
+.playlist-header-toolbar {
+  width: 140rpx;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.playlist-header-toolbar-icon {
+  width: 72rpx;
+  height: 72rpx;
+  overflow: hidden;
+}
+.playlist-header-toolbar-icon-img {
+  width: 100%;
+  height: 100%;
+  transform: scale(1.4);
+  opacity: 0.7;
+}
+.playlist-header-toolbar-count-text {
+  font-size: 24rpx;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.7);
+}
+.song-list {
+}
+.song-list-item {
+  border-top: 1px solid #ddd;
+  padding: 20rpx 16rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.song-list-item-order {
+  flex: 0 0 auto;
+  width: 80rpx;
+  font-size: 28rpx;
+  color: #666;
+  text-align: center;
+}
+.song-list-item-content {
+  flex: 1 0 0;
+}
+.song-list-item-content-mv {
+  width: 60rpx;
+  height: 60rpx;
+}
+.song-list-item-content-mv-img {
+  width: 100%;
+  height: 100%;
+}
+.song-list-item-content-title {
+  font-size: 32rpx;
+  color: black;
+  line-height: 1;
+}
+.song-list-item-content-author {
+  margin-top: 20rpx;
+  font-size: 26rpx;
+  color: #666;
+  line-height: 1;
+}
+.play-all {
+  padding: 30rpx 16rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 28rpx;
+  color: black;
+  line-height: 1;
+}
+.play-all-icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 5px;
+}

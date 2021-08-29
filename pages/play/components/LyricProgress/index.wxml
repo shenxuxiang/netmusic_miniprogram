@@ -1,0 +1,9 @@
+<wxs src="./utils.wxs" module="utils" />
+<view 
+  class="lyric{{active ? ' active' : ''}}" 
+  id="song-lyric"
+  style="{{utils.getStyle(style)}}"
+>
+  {{lyric}}
+</view>
+  

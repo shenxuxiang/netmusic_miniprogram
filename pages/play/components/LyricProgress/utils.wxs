@@ -1,0 +1,13 @@
+function getStyle(target) {
+  var str = JSON.stringify(target);
+
+  str = str.replace(getRegExp('\"', 'g'), '');
+  str = str.replace(getRegExp('\,', 'g'), ';');
+  str = str.replace(getRegExp('^\{'), '').replace(getRegExp('\}$'), '');
+  
+  return str;
+}
+
+module.exports = {
+  getStyle: getStyle,
+}

@@ -1,0 +1,12 @@
+<view class="mv-panel">
+  <navigator wx:for="{{sourceList}}" wx:key="id" target="self" url="/pages/mv/index?id={{item.id}}" class="list-item">
+    <image 
+      class="list-item-image"
+      src="{{item.picUrl}}?param=200y200" 
+      mode="aspectFill"
+      lazy-load
+    />
+    <view class="list-item-title">{{ item.name }}</view>
+    <view class="list-item-author">{{ item.artistName }}</view>
+  </navigator>
+</view>

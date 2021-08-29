@@ -1,0 +1,26 @@
+.home-page {
+  padding-top: 100rpx;
+}
+.panel {
+  width: 100%;
+  margin-top: 20rpx;
+}
+.panel-header {
+  padding: 20rpx 16rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.panel-avatar {
+  width: 30rpx;
+  height: 30rpx;
+}
+.panel-title {
+  margin-left: 10rpx;
+  font-size: 30rpx;
+  color: black;
+}
+.panel-content {
+  margin: 0;
+  padding: 0;
+}

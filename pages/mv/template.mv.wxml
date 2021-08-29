@@ -1,0 +1,23 @@
+<!-- mv列表 -->
+<template name="mv">
+  <scroll-view scroll-y enable-flex class="mv-panel">
+    <navigator 
+      wx:for="{{mvs}}"
+      wx:key="id"
+      class="mv-item"
+      target="self" 
+      url="/pages/mv/index?id={{item.id}}" 
+      open-type="navigate"
+    >
+      <image 
+        class="mv-item-image" 
+        src="{{item.cover}}" 
+        mode="aspectFill" 
+        lazy-load="{{false}}"
+      />
+      <view class="mv-item-name">{{ item.name }}</view>
+      <view class="mv-item-singer">{{ item.artistName }}</view>
+    </navigator>
+    <LoadMore status="notMore" visible="{{ mvs && mvs.length > 0 }}" />
+  </scroll-view>
+</template>

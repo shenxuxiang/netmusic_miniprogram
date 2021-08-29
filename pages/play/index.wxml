@@ -1,0 +1,73 @@
+<view class="container">
+  <image 
+    src="../../static/images/play-bg.jpg" 
+    class="page-background"
+  />
+  <image 
+    wx:if="{{coverImg}}" 
+    src="{{coverImg}}?param=600y600" 
+    class="page-background-music-cover" 
+  />
+  <view class="cover-container">
+    <image 
+      src="../../static/images/play.png"
+      mode="aspectFit" 
+      class="plate-bg" 
+    />
+    <image
+      wx:if="{{coverImg}}"
+      src="{{coverImg}}?param=600y600" 
+      mode="aspectFit"
+      class="plate-music-cover{{isPlaying ? ' playing' : ''}}" 
+    />
+    <image
+      src="../../static/images/aag.png"
+      mode="aspectFit" 
+      class="music-pointer{{isPlaying ? ' playing' : ''}}" 
+    />
+  </view>
+  <view class="music-play-progress">
+    <ProgressBar 
+      currentTime="{{currentTime}}" 
+      duration="{{duration}}"
+      bind:on-change="handleSeek"
+    />
+  </view>
+  <view class="lyric-wrapper">
+    <LyricProgress 
+      lyricList="{{lyrics}}" 
+      currentTime="{{currentTime}}"
+      duration="{{duration}}"
+      playStatus="{{isPlaying ? 'running' : 'paused'}}"
+    />
+  </view> 
+  <view class="control-panel">
+    <image 
+      src="../../static/images/ajh.png" 
+      mode="aspectFit" 
+      class="previous-btn"
+      bindtap="handlePrev"
+    />
+    <image
+      hidden="{{!isPlaying}}"
+      src="../../static/images/ajd.png"
+      mode="aspectFit"
+      class="play-pause-btn"
+      bindtap="handlePause"
+    />
+    <image
+      hidden="{{isPlaying}}"
+      src="../../static/images/ajf.png"
+      mode="aspectFit"
+      class="play-pause-btn"
+      bindtap="handlePlay"
+    />
+    <image
+      src="../../static/images/ajb.png"
+      mode="aspectFit"
+      class="next-btn"
+      bindtap="handleNext"
+    />
+  </view>
+</view>
+  

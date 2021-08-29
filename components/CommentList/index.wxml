@@ -1,0 +1,78 @@
+<scroll-view 
+  class="comment-page"
+  lower-threshold="150"
+  bindscrolltolower="handleReachBottom"
+  scroll-y
+>
+  <view class="hot-comment">
+    <view class="hot-comment-title">热门评论</view>
+    <view 
+      class="hot-comment-item" 
+      wx:for="{{ hotCommentList }}" 
+      wx:key="commentId"
+    >
+      <view class="comment-user-info">
+        <image
+          class="comment-user-info-avatar"
+          src="{{item.user.avatarUrl}}"
+          mode="aspectFill"
+          lazy-load="{{true}}"
+        />
+        <view class="comment-user-info-nickname">
+          <text>{{ item.user.nickname }}</text>
+          <view class="comment-time">{{ item.time }}</view>
+        </view>
+        <view class="comment-user-star-number">
+          <text class="comment-user-star-number-text">{{ item.likedCount }}</text>
+          <view class="comment-user-star-number-icon">
+            <image class="comment-user-star-number-icon-image" src="../../static/images/xg.png" mode="aspectFill" />
+          </view>
+        </view>
+      </view>
+      <view class="comment-content">
+        {{ item.content }}
+      </view>
+    </view>
+  </view>
+
+  <view class="hot-comment">
+    <view class="hot-comment-title">精彩评论</view>
+    <view 
+      class="hot-comment-item" 
+      wx:for="{{ commentList }}" 
+      wx:key="commentId"
+    >
+      <view class="comment-user-info">
+        <image
+          class="comment-user-info-avatar"
+          src="{{item.user.avatarUrl}}"
+          mode="aspectFill"
+          lazy-load="{{true}}"
+        />
+        <view class="comment-user-info-nickname">
+          <text>{{ item.user.nickname }}</text>
+          <view class="comment-time">{{ item.time }}</view>
+        </view>
+        <view class="comment-user-star-number">
+          <text class="comment-user-star-number-text">{{ item.likedCount }}</text>
+          <view class="comment-user-star-number-icon">
+            <image class="comment-user-star-number-icon-image" src="../../static/images/xg.png" mode="aspectFill" />
+          </view>
+        </view>
+      </view>
+      <view class="comment-content">
+        <view wx:if="{{ item.beReplied.length > 0 }}">
+          回复：<text class="user-link">@{{ item.beReplied[0].user.nickname }}</text>
+        </view>
+        <view>{{ item.content }}</view>
+
+        <view wx:if="{{ item.beReplied.length > 0 }}" class="replied-comment">
+          <text class="user-link">@{{ item.beReplied[0].user.nickname }}：</text>
+          <view>{{ item.beReplied[0].content }}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <LoadMore visible status="{{loadStatus}}" />
+</scroll-view>
+  

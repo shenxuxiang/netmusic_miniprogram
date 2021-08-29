@@ -1,0 +1,65 @@
+<scroll-view 
+  class="ranking-tab-container"
+  scroll-y
+>
+  <view class="music-panel" wx:if="{{artistToplist}}">
+    <image
+      class="music-panel-image" 
+      src="{{artistToplist.coverUrl}}?param=200y200" 
+      mode="aspectFill" 
+      lazy-load
+    />
+    <view class="music-panel-content-list">
+      <view 
+        class="music-panel-content-list-item" 
+        wx:for="{{artistToplist.artists}}" 
+        wx:key="third"
+      >
+        {{index + 1}}.{{item.first}}
+      </view>
+    </view>
+  </view>
+
+  <view class="music-panel" wx:if="{{rewardToplist}}">
+    <image
+      class="music-panel-image" 
+      src="{{rewardToplist.coverUrl}}?param=200y200" 
+      mode="aspectFill" 
+      lazy-load
+    />
+    <view class="music-panel-content-list">
+      <view
+        class="music-panel-content-list-item" 
+        wx:for="{{rewardToplist.songs}}" 
+        wx:key="id"
+      >
+        {{index + 1}}.{{item.name}}
+      </view>
+    </view>
+  </view>
+
+  <view class="panel">
+    <view class="panel-title">全球版</view>
+    <view class="panel-content">
+      <view 
+        class="music-list-item"
+        wx:for="{{rankingList}}" 
+        wx:key="id"
+      >
+        <image 
+          class="music-list-item-image" 
+          src="{{item.coverImgUrl}}?param=200y200" 
+          mode="aspectFill" 
+          lazy-load
+        />
+        <view class="music-list-item-title">
+          {{item.name}}
+        </view>
+      </view>
+      <view class="music-list-item empty"/>
+      <view class="music-list-item empty"/>
+      <view class="music-list-item empty"/>
+    </view>
+  </view>
+  <LoadMore visible="{{ rankingList.length > 0 }}" status="notMore" />
+</scroll-view>

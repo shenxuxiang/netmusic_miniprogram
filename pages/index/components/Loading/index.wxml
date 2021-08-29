@@ -1,0 +1,5 @@
+<view class="loading-x" wx:if="{{hasShow}}">
+  <view class="loading-1" />
+  <view class="loading-2" />
+  <view class="loading-3" />
+</view>

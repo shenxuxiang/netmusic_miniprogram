@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "ProgressBar": "./components/ProgressBar",
+    "LyricProgress": "./components/LyricProgress"
+  },
+  "navigationBarTitleText": "音乐播放页",
+  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#fff",
+  "backgroundTextStyle": "dark",
+  "enablePullDownRefresh": false
+}

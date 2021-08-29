@@ -1,0 +1,14 @@
+{
+  "navigationBarTitleText": "首页",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "backgroundTextStyle": "light",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "NavigationTab": "./components/NavigationTab/index",
+    "RecommendTab": "./components/RecommendTab/index",
+    "SongSheetTab": "./components/SongSheetTab/index",
+    "RadioTab": "./components/RadioTab/index",
+    "RankingTab": "./components/RankingTab/index"
+  }
+}

@@ -1,0 +1,121 @@
+<view class="container">
+  <view class="playlist-header">
+    <!-- 背景 -->
+    <image 
+      wx:if="{{playlist.coverImgUrl}}"
+      class="playlist-header-bg"
+      src="{{playlist.coverImgUrl}}" 
+      mode="aspectFill"
+    />
+    <!-- 封面展示歌单信息 -->
+    <view class="playlist-header-content">
+      <view class="playlist-header-cover">
+        <image
+          wx:if="{{playlist.coverImgUrl}}"
+          class="playlist-header-cover-image"
+          src="{{playlist.coverImgUrl}}" 
+          mode="aspectFill"
+        />
+        <view class="play-count">
+          <image 
+            class="play-count-image" 
+            src="../../static/images/p0.png" 
+            mode="aspectFill" 
+            lazy-load
+          />
+          <text>{{ playlist.playCount }}</text>
+        </view>
+      </view>
+      <view class="playlist-header-left">
+        <view class="playlist-header-left-title">{{ playlist.name }}</view>
+        <view class="creator-info">
+          <image 
+            wx:if="{{creator.avatarUrl}}"
+            class="creator-info-avatar" 
+            src="{{creator.avatarUrl}}" 
+            mode="aspectFill"
+          />
+          <text class="creator-info-nickname">{{creator.nickname}}</text>
+        </view>
+      </view>
+    </view>
+    <!-- 封面的 toolbar。分别是收藏、品论、分享 -->
+    <view class="playlist-header-toolbar-x">
+      <view class="playlist-header-toolbar">
+        <view class="playlist-header-toolbar-icon">
+          <image 
+            class="playlist-header-toolbar-icon-img" 
+            src="../../static/images/collect-icon.png" 
+            mode="aspectFill"
+          />
+        </view>
+        <view class="playlist-header-toolbar-count-text">{{playlist.subscribedCount || 0}}</view>
+      </view>
+
+      <view class="playlist-header-toolbar">
+        <view 
+          class="playlist-header-toolbar-icon" 
+          bindtap="handleClickCommentIcon"
+          data-comment-id="{{playlist.commentThreadId}}"
+        >
+          <image
+            class="playlist-header-toolbar-icon-img"
+            src="../../static/images/commend-icon.png" 
+            mode="aspectFill"
+          />
+        </view>
+        <view class="playlist-header-toolbar-count-text">{{playlist.commentCount || 0}}</view>
+      </view>
+
+      <view class="playlist-header-toolbar">
+        <view class="playlist-header-toolbar-icon">
+          <image 
+            class="playlist-header-toolbar-icon-img" 
+            src="../../static/images/share-icon.png" 
+            mode="aspectFill"
+          />
+        </view>
+        <view class="playlist-header-toolbar-count-text">{{playlist.shareCount || 0}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="play-all">
+    <image class="play-all-icon" src="../../static/images/playall.png" mode="aspectFill" />
+    <text>播放全部（共{{ tracks.length || 0 }}首）</text>
+  </view>
+
+  <view class="song-list">
+    <view 
+      wx:for="{{tracks}}"
+      wx:for-item="track"
+      wx:key="id"
+      class="song-list-item"
+      data-song-id="{{track.id}}"
+      bindtap="handlePlaySong"
+    >
+      <text class="song-list-item-order">{{index + 1}}</text>
+      <view class="song-list-item-content">
+        <view class="song-list-item-content-title">
+          {{ track.name }}
+        </view>
+        <view class="song-list-item-content-author">
+          {{ track.ar[0].name }}-{{ track.al.name }}
+        </view>
+      </view>
+      <view 
+        wx:if="{{track.mv > 0}}" 
+        class="song-list-item-content-mv"
+        data-mv-id="{{track.mv}}"
+        catchtap="handlePlayMv"
+      >
+        <image 
+          class="song-list-item-content-mv-img"
+          src="../../static/images/mv.png" 
+          mode="aspectFill"
+        />
+      </view>
+    </view>
+  </view>
+  <LoadMore visible="{{tracks.length > 0}}" status="notMore" />
+</view>
+  

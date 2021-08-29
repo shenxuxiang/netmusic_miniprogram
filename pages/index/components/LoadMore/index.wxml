@@ -1,0 +1,11 @@
+<view class="load-more" wx:if="{{visible}}">
+  <view class="load-more-loading">
+    {{text}}
+    <view class="loading-label" hidden="{{status !== 'loading'}}">
+      <view class="block block-1" />
+      <view class="block block-2" />
+      <view class="block block-3" />
+    </view>
+  </view>
+</view>
+  

@@ -1,0 +1,107 @@
+.song-sheet-container {
+  width: 100%;
+  height: calc(100vh - 100rpx);
+  overflow: auto;
+}
+.header {
+  height: 80rpx;
+  padding: 0 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.category-name {
+  line-height: 1;
+  font-size: 30rpx;
+  color: black;
+  font-weight: bold;
+}
+.category-name::before {
+  display: inline-block;
+  content: '';
+  width: 3px;
+  height: 30rpx;
+  margin-right: 10rpx;
+  background: #ff5050;
+  vertical-align: -2px;
+}
+.seletc-button {
+  padding: 10rpx;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 28rpx;
+  line-height: 1;
+  color: #ccc;
+  transition: all 200ms ease;
+}
+.seletc-button:active {
+  background: rgba(204, 204, 204, 0.1);
+}
+
+.play-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  width: 100%;
+  padding: 0 10rpx;
+  box-sizing: border-box;
+}
+.list-item {
+  position: relative;
+  width: calc(50% - 20rpx);
+  margin: 20rpx 10rpx;
+  border-radius: 4px 4px 0 0;
+  overflow: hidden;
+}
+.list-item-image {
+  width: 100%;
+  height: 300rpx;
+}
+.play-count {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  padding: 0 10rpx;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+}
+.play-count-image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 8rpx;
+}
+.list-item-title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  font-size: 28rpx;
+  line-height: 36rpx;
+}
+.back-top {
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: #f80;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 1;
+  font-size: 28rpx;
+  color: #fff;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}

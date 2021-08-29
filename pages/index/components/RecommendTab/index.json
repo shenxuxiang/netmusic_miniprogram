@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "RecommendPanel": "../RecommendPanel/index",
+    "NewSongPanel": "../NewSongPanel/index",
+    "MvPanel": "../MvPanel/index",
+    "DjPanel": "../DjPanel/index",
+    "LoadMore": "../LoadMore"
+  }
+}

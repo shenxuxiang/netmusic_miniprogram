@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "歌单详情",
+  "usingComponents": {
+    "LoadMore": "../index/components/LoadMore"
+  }
+}

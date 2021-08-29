@@ -1,0 +1,22 @@
+<view class="container home-page">
+  <NavigationTab 
+    navList="{{navList}}" 
+    activeKey="{{activeNavKey}}"
+    bind:change-tab="handleChangeTab"
+  />
+  <view hidden="{{activeNavKey !== 'recommend'}}">
+    <RecommendTab visible="{{activeNavKey === 'recommend'}}"/>
+  </view>
+  
+  <view hidden="{{activeNavKey !== 'playlist'}}">
+    <SongSheetTab visible="{{activeNavKey === 'playlist'}}"/>
+  </view>
+
+  <view hidden="{{activeNavKey !== 'radio'}}">
+    <RadioTab visible="{{activeNavKey === 'radio'}}"/>
+  </view>  
+
+  <view hidden="{{activeNavKey !== 'ranking'}}">
+    <RankingTab visible="{{activeNavKey === 'ranking'}}"/>
+  </view>
+</view>

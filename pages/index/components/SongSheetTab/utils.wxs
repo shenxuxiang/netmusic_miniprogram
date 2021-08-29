@@ -1,0 +1,15 @@
+function isEmpty(source) {
+  if (!source) return true;
+  var type = source.constructor;
+  if (type === 'Array') {
+    return source.length === 0;
+  } else if (type === 'Object') {
+    return Object.keys(source).length === 0;
+  } else {
+    return true;
+  }
+}
+
+module.exports = {
+  isEmpty: isEmpty,
+};
